@@ -1,0 +1,1248 @@
+{
+  "package": "HK_hover_GUI",
+  "release_date": "2026-10-11",
+  "entry": "hk_hover_gui.m",
+  "batch_entry": "run_hover.m",
+  "scope": "takeoff and fixed-position hover only",
+  "created_at": "2026-10-11T00:43:05.277948+08:00",
+  "excluded": "history, previous results, trajectory/pulse/filter models and their scenario entrypoints",
+  "models": [
+    {
+      "model": "flappy_hk_15hz_slow_fast_hover.slx",
+      "geometry_paths": [
+        "assets/HK_prototype/meshes/left_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/left_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/torso_symmetric_visual.STL"
+      ],
+      "interpreted_functions": [
+        "flappy_quad_actuator(u)",
+        "flappy_quad_controller(u)",
+        "flappy_sil_sensor_model(u)",
+        "flappy_sil_wing_kinematics(u)",
+        "flappy_sil_wing_loads(u)"
+      ]
+    },
+    {
+      "model": "flappy_hk_disturbed_position_hover.slx",
+      "geometry_paths": [
+        "assets/HK_prototype/meshes/left_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/left_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/torso_symmetric_visual.STL"
+      ],
+      "interpreted_functions": [
+        "flappy_sil_position_controller(u)",
+        "flappy_sil_sensor_model(u)",
+        "flappy_sil_virtual_actuator(u)",
+        "flappy_sil_wing_kinematics(u)",
+        "flappy_sil_wing_loads(u)"
+      ]
+    },
+    {
+      "model": "flappy_hk_geometry_sil_hover.slx",
+      "geometry_paths": [
+        "assets/HK_prototype/meshes/left_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/left_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/torso_symmetric_visual.STL"
+      ],
+      "interpreted_functions": [
+        "flappy_sil_controller(u)",
+        "flappy_sil_virtual_actuator(u)",
+        "flappy_sil_wing_kinematics(u)",
+        "flappy_sil_wing_loads(u)"
+      ]
+    },
+    {
+      "model": "flappy_hk_gui_hover.slx",
+      "geometry_paths": [
+        "assets/HK_prototype/meshes/left_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/left_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/torso_symmetric_visual.STL"
+      ],
+      "interpreted_functions": [
+        "flappy_quad_actuator(u)",
+        "flappy_quad_controller(u)",
+        "flappy_sil_sensor_model(u)",
+        "flappy_sil_wing_kinematics(u)",
+        "flappy_sil_wing_loads(u)"
+      ]
+    },
+    {
+      "model": "flappy_hk_quadrotor_position_hover.slx",
+      "geometry_paths": [
+        "assets/HK_prototype/meshes/left_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/left_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/torso_symmetric_visual.STL"
+      ],
+      "interpreted_functions": [
+        "flappy_quad_actuator(u)",
+        "flappy_quad_controller(u)",
+        "flappy_sil_sensor_model(u)",
+        "flappy_sil_wing_kinematics(u)",
+        "flappy_sil_wing_loads(u)"
+      ]
+    },
+    {
+      "model": "flappy_mechanics.slx",
+      "geometry_paths": [
+        "assets/HK_prototype/meshes/left_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/left_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_LE_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/right_wing_symmetric_visual.STL",
+        "assets/HK_prototype/meshes/torso_symmetric_visual.STL"
+      ],
+      "interpreted_functions": []
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/flappy_urdf/flapper_sc_nominal_import.urdf",
+      "bytes": 5102,
+      "sha256": "4d571af9ab6f1992343b6b15407950cc345f252022e78078ef9b12d0286d4c5d",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/flappy_urdf/hk_flapper_import.urdf",
+      "bytes": 5314,
+      "sha256": "b9cd17365acef33e3e919b476f86d671682a72aaad0932bb090d6caa7516a283",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/flappy_urdf/meshes/left_LE.STL",
+      "bytes": 106684,
+      "sha256": "4eddd9e5d40ae08302872a58dc6f1348fe575927bde7e95d95ace7563a63eda7",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/flappy_urdf/meshes/left_wing.STL",
+      "bytes": 684,
+      "sha256": "3fccd8ff0a32f456fc889c325ce6d4861f91003f1b2b3a8b01c2fb38d5e00178",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/flappy_urdf/meshes/right_LE.STL",
+      "bytes": 106684,
+      "sha256": "a63a67fd13b639be4f7d88cb7a73e604c52766fa0c0e52e85ce9067a83ff60b3",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/flappy_urdf/meshes/right_wing.STL",
+      "bytes": 684,
+      "sha256": "3002f304aeab00e6547d06a3490d6461fa868622c0c9919a8c97d7441d60c660",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/flappy_urdf/meshes/torso.STL",
+      "bytes": 7084,
+      "sha256": "579635cd5914d427221c704a620c8955888a326d5d1518d5ab1244c4f947e48a",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/flappy_urdf/meshes/torso_no_base.STL",
+      "bytes": 3084,
+      "sha256": "2f1860fe8633588b4c89065e28a2902913ecaa69a4b91c93591761c5f56e71c9",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/flappy_urdf/meshes/torso_small_base.STL",
+      "bytes": 7084,
+      "sha256": "8e98d07e547d7dd316c1e3cf59fe7954b62f6339175f96af4618d73a2b4af978",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/flappy_urdf/meshes/Wing_Camber_70mm_C35mm_no_trailing_L.STL",
+      "bytes": 259084,
+      "sha256": "061e45c1bfed425130473ad4da42d0177c4aedf891ef749c1943310a7ccbb147",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/meshes/left_LE.STL",
+      "bytes": 106684,
+      "sha256": "4eddd9e5d40ae08302872a58dc6f1348fe575927bde7e95d95ace7563a63eda7",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/meshes/left_LE_symmetric_visual.STL",
+      "bytes": 80184,
+      "sha256": "19d97cec38b6439544abb69d2a9849b0ef13aa618967779040f1e953809d81e1",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/meshes/left_wing.STL",
+      "bytes": 13884,
+      "sha256": "df7de32431231ef26abf618d6ffa901e95a28ef5a295d86afc8bae8c39b2c79a",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/meshes/left_wing_symmetric_visual.STL",
+      "bytes": 13884,
+      "sha256": "c08b7411d6f35e2e95321362158b0e723a6c850a98f72b134413f72767abc4fd",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/meshes/right_LE.STL",
+      "bytes": 106684,
+      "sha256": "a63a67fd13b639be4f7d88cb7a73e604c52766fa0c0e52e85ce9067a83ff60b3",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/meshes/right_LE_symmetric_visual.STL",
+      "bytes": 80184,
+      "sha256": "1490f3fe584539f28c21e7f1cc91e3478b13e7d54fd9d7d384aaa2e4a4636bcb",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/meshes/right_wing.STL",
+      "bytes": 13884,
+      "sha256": "6445afed79c208aab0e29e79284d8dd2ab16bc074a26e393c6e311ad5ddddeb5",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/meshes/right_wing_mirrored_y.STL",
+      "bytes": 13884,
+      "sha256": "b85f265b7db9fbb080966dd7408dbd988273b07131202e0d168c2679cb0e16c0",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/meshes/right_wing_symmetric_visual.STL",
+      "bytes": 13884,
+      "sha256": "772614e9a68b8ecfd7b3b86313602d47f0db66ce27cc850aa0b32004c45812b6",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/meshes/torso_small_base.STL",
+      "bytes": 137484,
+      "sha256": "fa975530d11eb458cd69bc9e9bb4c35fb49ff56a5c79ddf2bb0c83dc50d8d46f",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/meshes/torso_symmetric_visual.STL",
+      "bytes": 282284,
+      "sha256": "02b114405fdcb5856d0211f3e918c7881f862f9fadceae68dd7fed0b502e0cbf",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "assets/HK_prototype/README.md",
+      "bytes": 1239,
+      "sha256": "69f5305dd6093baa913cb468fde1f344a84bdb9e1aca538ea2f73e0dc1204508",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "build_hover_gui_model.m",
+      "bytes": 754,
+      "sha256": "472674e0b9f30b1b3d1726819265e42db4740e895e105d874549b93002d931d8",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "build_mainline.m",
+      "bytes": 723,
+      "sha256": "c4ca387c4712fda6b075238604a71942f04dbbff7da262fb3800e016b5e082bc",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "CAD/frame.SLDPRT",
+      "bytes": 119108,
+      "sha256": "c66ad97e524cfc101372b635cefb980e1992a7d9a64e7df7ea5fb60176a4fe4e",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "CAD/frame.STL",
+      "bytes": 282284,
+      "sha256": "345a6fc61550c106bb10a9cefe7c84392655fc4f393fce7a0db75bfd888edf21",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "CAD/left_wing.SLDPRT",
+      "bytes": 76139,
+      "sha256": "bb3f5f1806960aa53d6481116eb1a0a1e3821482280ec58b3a9bf6252ebae8ff",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "CAD/left_wing.STL",
+      "bytes": 13884,
+      "sha256": "c0ecc559d1aa531e1170928bf72b09b033dc76d87c8370bc4ecbb12b7136b4cc",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "CAD/left_wing_LE.SLDPRT",
+      "bytes": 64480,
+      "sha256": "8c70f500f54fecdcbabcc20c492f587e3bfcf1c64e44e1e49ea3bf9c16ca5307",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "CAD/left_wing_LE.STL",
+      "bytes": 80184,
+      "sha256": "5f9c662fb2e09bb45e77436bbfbf8b4c9adbfd5036b119f4e8fd352db20df4dd",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "CAD/right_wing.SLDPRT",
+      "bytes": 81579,
+      "sha256": "a16331f09e6f1636dccf556b2422285aecd28293d52116d57f97a6680aa31ad9",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "CAD/right_wing.STL",
+      "bytes": 13884,
+      "sha256": "3447867aa054f9b94a734f4757f48468f326e2e4c2e4905acdefb1ae0f7fd4ab",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "CAD/right_wing_LE.SLDPRT",
+      "bytes": 64782,
+      "sha256": "133fc47c6fee1caaada80f6a18032f3f28d3986889781871d0bbce559e9f8fef",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "CAD/right_wing_LE.STL",
+      "bytes": 80184,
+      "sha256": "16441355cf7d81fa9ab1d9333989c5ab4b249270e951a6cdcf9dbc90b6a6fdd5",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "CAD/装配体1.SLDASM",
+      "bytes": 99775,
+      "sha256": "ae35267e532c6d7ebcdbcf591c61a1d23132c70c59506468a3468050e859a661",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "CAD/装配体1.STEP",
+      "bytes": 201412,
+      "sha256": "27d356fcc6b10c4caa4d7bc2a6fbc938e2e53f4bf8068f130a50474d8dbf9e28",
+      "role": "required_geometry_or_urdf"
+    },
+    {
+      "path": "docs/GUI_GUIDE.md",
+      "bytes": 4833,
+      "sha256": "66d7850a0f6d76f0fda11a6702d99a8aa38db3f3dad1b1ebf40ba4b244da8582",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "docs/GUI_VALIDATION.md",
+      "bytes": 2234,
+      "sha256": "f8f8e5641bc8ea570a1948b712860d9c69bc62958723cdb18828394c61acac0a",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "docs/PARAMETERS.md",
+      "bytes": 5386,
+      "sha256": "aa0f26993e01a4b34110a634525ed6a2939d2387b5eb041cee93a4cd587ee9f7",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "hk_hover_gui.m",
+      "bytes": 269,
+      "sha256": "df31a090c3b07922aa0623ee37ea628f65059a6d294527b18ec099a244bad2eb",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "mainline_relocate_models.m",
+      "bytes": 1636,
+      "sha256": "1c9a7a23f54faac51a86302ab5bfa9e04f13c9303b09dc24820b0b4444aac81b",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "mainline_source_hashes.m",
+      "bytes": 881,
+      "sha256": "5bac2818e4d7a2946a24eb1c2f3ccc862bf1558035599afe3f125e4e9d613abd",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "models/flappy_hk_15hz_slow_fast_hover.slx",
+      "bytes": 654328,
+      "sha256": "a940054473ba3160a06babdacd1aed982d3e8a84551ce2a5b9212cc2f09cff30",
+      "role": "mechanical_ancestor"
+    },
+    {
+      "path": "models/flappy_hk_disturbed_position_hover.slx",
+      "bytes": 497808,
+      "sha256": "491d4cb485dc29b4ccc76c3007edb3e6e655ab4e7cb466f8a8e395a914a1b1c2",
+      "role": "mechanical_ancestor"
+    },
+    {
+      "path": "models/flappy_hk_geometry_sil_hover.slx",
+      "bytes": 496794,
+      "sha256": "a91827a764c8ad357772e0d24fb72a8f200c77d381c98cacb9ce0c5062e6e052",
+      "role": "mechanical_ancestor"
+    },
+    {
+      "path": "models/flappy_hk_gui_hover.slx",
+      "bytes": 654328,
+      "sha256": "bc79fbc760afc178351fae964c6f876e661aa17e48ca5d4b6d7a9af91b50a623",
+      "role": "primary_hover_model"
+    },
+    {
+      "path": "models/flappy_hk_quadrotor_position_hover.slx",
+      "bytes": 654326,
+      "sha256": "2e108966dc3772bcdda7acf99c77f84fa35ac5370fb51ccbded7992f7927d553",
+      "role": "mechanical_ancestor"
+    },
+    {
+      "path": "models/flappy_mechanics.slx",
+      "bytes": 297141,
+      "sha256": "3c9bb33bc384bc938290161d370d355731d3d5aa143e591ee4a893f5bbd5495c",
+      "role": "mechanical_ancestor"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3460,
+      "sha256": "1418f5c54dea0409ad2eb53ac092cb8a1a2a863bdf330e09e90e52ccf6e35258",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "run_hover.m",
+      "bytes": 383,
+      "sha256": "1b6c6c593bf1b95e7efa0c2170a2d11ef8d85faa0303243e13adb548391e129d",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "run_mainline.m",
+      "bytes": 780,
+      "sha256": "8a7b74d8d168edcc92e1a6174bc4a6ef947e1b48f015f4c41b3230745869aea4",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "scripts/apply_hk_mechanics_presentation.m",
+      "bytes": 594,
+      "sha256": "5f9c714e99d20c57986514940c907869dc35e6d3b407661589627c34c82d1033",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/apply_hk_rigid_parameters.m",
+      "bytes": 1610,
+      "sha256": "c4717ce93343525dbedf94153f1a13611c371e45445c5d394a537997c2928c75",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/build_flappy_mechanics.m",
+      "bytes": 2616,
+      "sha256": "24a090b8e1721bf71042479819e600939425e27ea2b12b13f00a843e0f8acfa6",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/build_ground_takeoff_model.m",
+      "bytes": 5720,
+      "sha256": "9f01645da9be3657fdfbc5a2b6046f8b18b7a1d0285ce06f48340d8e9744c0e5",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/build_hk_15hz_slow_fast_hover_model.m",
+      "bytes": 731,
+      "sha256": "d03a8ecb087a7a4dcd1492528496aa76ec3f7dee902b902ca27ada6a95e71841",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/build_hk_disturbed_position_hover_model.m",
+      "bytes": 1819,
+      "sha256": "42bc29b5335bbe3f43d499e086263d628f5a279c363bad2b69948e0590aa6afd",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/build_hk_geometry_sil_hover_model.m",
+      "bytes": 645,
+      "sha256": "b9285372c4e4713a2b75c64fd036067f9a8d45f12d239301c88d3c97f7ae5206",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/build_hk_quadrotor_model.m",
+      "bytes": 6410,
+      "sha256": "26b3ef61b549801159dc4ceed38b39423a86573b31851a0ce4b8c700b477c55e",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/build_sil_hover_model.m",
+      "bytes": 16653,
+      "sha256": "a104133bbc67ebb4f1fcff9fa978a58a218ae546e848d76f81b11ca8e0265a58",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/build_sil_position_hover_model.m",
+      "bytes": 279,
+      "sha256": "68c79abacf4c883b2874bb236eab13e268b1dedde0885cc991b614750c6c170c",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/build_sil_variant_model.m",
+      "bytes": 1570,
+      "sha256": "1439a2e3deba258da568fa970353ff2f00800d5b4ad0394c68cc34a22cf0e1b0",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/build_test2_aero_model.m",
+      "bytes": 3345,
+      "sha256": "d9e798a23e48ebebae52448b4ac0d2b307d4e02626efbd6a4418fe1b1b17c29f",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/build_test2_motion_model.m",
+      "bytes": 2739,
+      "sha256": "129973e3ab80203b5043bd243d7ecd5859d17cd0e52332a0b141bcf7a122052f",
+      "role": "matlab_source"
+    },
+    {
+      "path": "scripts/rebuild_from_active_hk_urdf.m",
+      "bytes": 1573,
+      "sha256": "cfb016b691099c2a4031a3fda834d41d6fab196b660d110a090470516f1d73e0",
+      "role": "matlab_source"
+    },
+    {
+      "path": "smoke_mainline.m",
+      "bytes": 529,
+      "sha256": "cf19d9270677f012c8deaa45a01df12993ba7480ea128f64c9db024b5036c846",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "src/flappy_apply_hk_presentation.m",
+      "bytes": 2989,
+      "sha256": "09ffcf90141d8c9f99785994ac98e6a026cc7616979c6b86e9782e718a018862",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_apply_hk_visuals.m",
+      "bytes": 1673,
+      "sha256": "45dd99dac651d8b98f4772e60dfd0c575418919f4cafbc4c3a0db349c2be677f",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_apply_pitch_axis_offsets.m",
+      "bytes": 2416,
+      "sha256": "046678f1d25a11a7e1b0ad0d38fce4e05acc7327adfcd32c66783fd10f2f613d",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_apply_sil_layout.m",
+      "bytes": 6394,
+      "sha256": "661f2fe2ee7215bd0814843cd6524f6a69fe85dc5e13a2c5f0cd82bab849a62b",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_euler_to_quaternion.m",
+      "bytes": 458,
+      "sha256": "59ecca0e5def39975c11e0a0bf8afdece270841131ad06f83162d3b8ba8db4ce",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_ground_config.m",
+      "bytes": 1259,
+      "sha256": "b177dc1b599d7bcca8820c661a29c273e6d87d997cd296cef29b115ffd7020c7",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_hk_15hz_actuator_comparison_config.m",
+      "bytes": 1534,
+      "sha256": "4788ee8926d9086c6892296d56ffff2c84d4f9cb53bf3b47863f72b416421510",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_hk_15hz_hover_paper_config.m",
+      "bytes": 1162,
+      "sha256": "6431ef40611e5e48d19bbfc642046980a772f8a97252472ab8e80e0fb6d84d8d",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_hk_15hz_slow_fast_config.m",
+      "bytes": 1488,
+      "sha256": "8e06310a348edfdc024f32cfae820c8fab4d6791355d5dc9060d96f6d12f94cf",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_hk_ground_geometry.m",
+      "bytes": 699,
+      "sha256": "d228ed452bc2724c414b3842a7b80bf82946a9a4efbde836cc9f8a5e9229322d",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_hk_ground_support_candidates.m",
+      "bytes": 2331,
+      "sha256": "4a65637a1117ea8af088e87ad39f3f7e8e23a3742030979e7adce4e542daa2e2",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_hk_lift_map.m",
+      "bytes": 1916,
+      "sha256": "5281f71be450f9c8e3c050300075863359990677b589c1392e66ba5612fd648f",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_hk_rigid_parameters.m",
+      "bytes": 2604,
+      "sha256": "8b321636440c385b302224a99fa41cc2a605d600b5dde39b171fbf33c64d498b",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_hk_trajectory_command.m",
+      "bytes": 4596,
+      "sha256": "f87190c2f91ce9ec0428e17959ebe2496abffcc292f03e443a7f0d91b3e7ef07",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_hk_visual_theme.m",
+      "bytes": 1073,
+      "sha256": "1101688ecf06b2c61f915be94e98d6b2ef1a876ad465a55548f12af52926eb01",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_hk_wing_geometry.m",
+      "bytes": 4477,
+      "sha256": "eeb1640ede8982a1b5b004e0b7ddcfa02f3a4ecd4541de84047a26f430332853",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_nominal_world_wrench.m",
+      "bytes": 1562,
+      "sha256": "567f226f9099fa499f26b560fde7deb953fadcf1b65a8a1bca459efd3e79cab3",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_parameters.m",
+      "bytes": 2174,
+      "sha256": "cf2d1535816ca5c7c630dbf2009db7349b8a5742ab0e5f86fa2f59f593cddf7b",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_prepare_hk_symmetric_visual_meshes.m",
+      "bytes": 5726,
+      "sha256": "15940e819d4b50b20ed9851cd72ac153ef7ca2d00b2de969ef08dbb46179e738",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_quad_actuator.m",
+      "bytes": 1659,
+      "sha256": "f52a2f4af140d679616eb100581d4b6a8ce6ceb7c1219d53267e5677278ab51c",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_quad_allocate.m",
+      "bytes": 1637,
+      "sha256": "9b5f5923d135527f5a0bef984fc306d5834604df50b530d8b4223ad12d68ae03",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_quad_collect.m",
+      "bytes": 7394,
+      "sha256": "9472d0e46cf7c45a1d7cdd12fb7ea19bb96fec67b9f2a79fb3a97708c8531219",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_quad_config.m",
+      "bytes": 3039,
+      "sha256": "0caf6b483a5226102888b4fba4c69a509d7aa8cadc80a619ce9dc4d802e1dc55",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_quad_controller.m",
+      "bytes": 10045,
+      "sha256": "cf828fe132f365cfbb90637235d637f075acc2445236596b25a1df7bd4e29135",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_quad_derive.m",
+      "bytes": 773,
+      "sha256": "06d09419f4472f56ded8c8c330bffc56c70f829af325688d7d11970d9a8192dd",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_quad_steady.m",
+      "bytes": 382,
+      "sha256": "e54565574412958528dbc063afe1c82a70d6cfbb095ceb80fc736f4e3c8fcf64",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_quaternion_attitude_error.m",
+      "bytes": 544,
+      "sha256": "3392ea7e6fe635b5b20e74710c2456f058541264e8785284aaa90340d8f21a10",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_quaternion_rotation.m",
+      "bytes": 565,
+      "sha256": "2b385d175b2dbe6da51badfee545ecb3eccf26efc68027e41619e865e3b6102a",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_quaternion_to_euler.m",
+      "bytes": 418,
+      "sha256": "998bb75b517c3f69e365b24dd7c8ac36c97e86e40b96856d300934a2b94aaed1",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_resample_vector_log.m",
+      "bytes": 641,
+      "sha256": "18abc38ecc6aaf2028d2c4869c1e9713dde1fa9e9479ba40231e8a5304415e22",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_sil_active_config.m",
+      "bytes": 412,
+      "sha256": "885aa497892f7f0ddd42ad503ebe8f79a1476ba45de29b7782b4090452e2936a",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_sil_attitude_trim.m",
+      "bytes": 866,
+      "sha256": "cd51d099d033447014f0ab4a0e70908d214d57edf26e20a2b6ce675381ff42ca",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_sil_config.m",
+      "bytes": 5330,
+      "sha256": "c6946148799220da818fc9317222a857270575a0f8aff9ad22b34d42884a7de0",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_sil_controller.m",
+      "bytes": 2440,
+      "sha256": "5e79e9b614872b97fee885664bffba13b7bcfa6e36c21b3486254a5fcf34dde5",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_sil_flappy_height_pid.m",
+      "bytes": 2506,
+      "sha256": "216fde683cc2155ad90b28e6250ea7014ee214cac289643bb2cbbad96e5b50ee",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_sil_position_controller.m",
+      "bytes": 3852,
+      "sha256": "d6bf06ca42b4b45bb7ddb5d2246ce6fc9eff5f78b0e4dbfa3c3646b77334c728",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_sil_sensor_model.m",
+      "bytes": 2624,
+      "sha256": "e3c8c691dfc313a67121ab0b3f9cd122d34fda862af152b1e67048dcef15f355",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_sil_virtual_actuator.m",
+      "bytes": 2027,
+      "sha256": "ea2343543c72ba7fd560d1c1fec1488c031ef69b31adcf38a7aac7cee10397fb",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_sil_wing_kinematics.m",
+      "bytes": 1296,
+      "sha256": "40901bbed3d0c458cfa35ac872df1f94248fbefb6c4b1f8f1e7a12a100b7c700",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_sil_wing_loads.m",
+      "bytes": 3473,
+      "sha256": "6786f6c2a8026b0630ee1921c987c742677b0992c80e7a4d87db3f377d856538",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_validate_import.m",
+      "bytes": 816,
+      "sha256": "73bec6522ac5a4876bb85901dcae36acc0a4d566b4b1ca93575dcdf4c3556a35",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_vehicle_mass.m",
+      "bytes": 413,
+      "sha256": "38d643628abc63c743090609204c13b8c8e8ef32ccd9325e6261b1867eeafcca",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/flappy_wing_aero.m",
+      "bytes": 2988,
+      "sha256": "659040368a12bee60b4edc76a4bc29ba924e956cb347fb98bdcc12ec671f7eb7",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/hk_hover_config.m",
+      "bytes": 3452,
+      "sha256": "cc13d0aec5e172d11de5261361b8721aa37d1017d014a87f40881641e2f7b6e7",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/hk_hover_defaults.m",
+      "bytes": 118,
+      "sha256": "e98841e8d6a0849f2416c23dfd48d98cbbfb5bf5d481d87ec45c69f235234f82",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/hk_hover_schema.m",
+      "bytes": 3495,
+      "sha256": "087d013f9ccaae38b3f5fc85de1e9a5f520c385bd34ad27b8246fb28dcb8b475",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/hk_hover_validate.m",
+      "bytes": 911,
+      "sha256": "10510869594da77a34ea9f8d982509ccba7337849384d91c3993bba415e8241b",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/hk_hover_write_json.m",
+      "bytes": 214,
+      "sha256": "ba9a00861dc841496ed66f346bce0d317af7e39fbc5e6c5ad85ac965032c1355",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/HKHoverApp.m",
+      "bytes": 11473,
+      "sha256": "1774d606d272f93a07741781fd8a29d5191abb78179cc3cb58507d7dd6e1d4cf",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/HKHoverLogs.m",
+      "bytes": 354,
+      "sha256": "f8f2f45a8b05a9cda0769a693b995afee922a18b0f4bed45f4d5356ba5607ff6",
+      "role": "matlab_source"
+    },
+    {
+      "path": "src/HKHoverSession.m",
+      "bytes": 5903,
+      "sha256": "6285bc23b37f6423ee34762ba6aea30a6c4983e81cfa0f5a2ae5ec37d8237339",
+      "role": "matlab_source"
+    },
+    {
+      "path": "startup_mainline.m",
+      "bytes": 807,
+      "sha256": "7fd09d376c76a567519c0f41735d4d9b35aec267782289d3a3018462d4ab7175",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "tests/test_hover_gui.m",
+      "bytes": 2194,
+      "sha256": "58acdc1eae22418d322ec21aa779aa06269eba215059cb5e04be682fbfec9497",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "tests/test_hover_gui_simulation.m",
+      "bytes": 2831,
+      "sha256": "5ce61cadc73929cca7daffb9971bfb65a647b884ac06a7459ce2c1df4a90a532",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "tests/test_quadrotor_core.m",
+      "bytes": 3828,
+      "sha256": "976c3cfd9cef100b8bc3b60c51cc76b98608ddb7ff4cd89484b969eed433246d",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "third_party/flappy/demo.gif",
+      "bytes": 1949043,
+      "sha256": "6416086a0431826bee86ebbd2e77df729fca735f62caf1b43a2cfc8069b9b6a7",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/__init__.py",
+      "bytes": 334,
+      "sha256": "391dd4279a447ff8edc58563cfff025bb736b22772470678e8bc59c2bd35c0fc",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/__init__.py",
+      "bytes": 194,
+      "sha256": "8d9c2238ab8430e13f860f5dbed7e4ec8a3d7dbcd9e6a228feea60322075a625",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/Actuator.cpp",
+      "bytes": 2784,
+      "sha256": "ad93ce48d72115fcf2bc5f1add837d5796e20a947b9b306aa2c140521058821b",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/Actuator.hpp",
+      "bytes": 1501,
+      "sha256": "4d0649f1a6f6b5d94f1df4cb86044fa44ed1f968789b25e2de057b8449f9dd5a",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/config/mav_config_list.json",
+      "bytes": 3130,
+      "sha256": "44e3d432a55aa36220ec55911324e487b12cb35424965ef0642ae151ca89c41b",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/config/sim_config.json",
+      "bytes": 139,
+      "sha256": "825b78de4facc47e999251d721adbeb6a10f272698ea2d7a4325e07a113b78bd",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/controllers/arc_xy_arc_z.py",
+      "bytes": 28565,
+      "sha256": "8c587b68c0eb7ffa97ed210dc9eb5b47cbcf5fd822857b3dd1ef5fa3ba1ccaf0",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/controllers/controller_maneuver.py",
+      "bytes": 17295,
+      "sha256": "23937d7fd2dc2e95ce309256358bcae2c94b42f33614290e68082246967d1a51",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/controllers/controller_no_base.py",
+      "bytes": 17286,
+      "sha256": "e789d95ef4c30cc92602c5979fd897f249e7c630d2adb1368e9893ca7cca06f0",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/controllers/pid_controller.py",
+      "bytes": 16310,
+      "sha256": "d78732b746db790fc28cbd367cdc2d7036858365c152ea732b40ee3a915e80fd",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/controllers/pid_xy_arc_z.py",
+      "bytes": 23172,
+      "sha256": "daed6ba03b104859615d1f57dcbda6e01ac9dc541144c6bb4c64aebeca91c932",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/controllers/pid_xy_arc_z_maneuver.py",
+      "bytes": 21837,
+      "sha256": "961eacebff43cd02b8affb0c396ee4d2fff56197e80ed57e2000601761638bf5",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/ddpg_fwmav.py",
+      "bytes": 3434,
+      "sha256": "48d7f865c7ad426a95f9af38886842f394e4f11cefb73f878c906657a9ab6ab0",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/fwmav.py",
+      "bytes": 23046,
+      "sha256": "da049bb0a26430aed8f73ac84e838b40f4b5fc47607988d9b5aa5b8ceaeed988",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/fwmav_maneuver_env.py",
+      "bytes": 12822,
+      "sha256": "e356ee2aeccb84e27d3d79b087359941a510eb1d494a28814818afa5969e8dc2",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/fwmav_sim_en_old_with_control_working.py",
+      "bytes": 8418,
+      "sha256": "9fc7f8b59d20ed3eaddf45eb60ef47413f8066fcaf313b21a7918695329a4895",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/fwmav_sim_env.py",
+      "bytes": 9538,
+      "sha256": "81feba8095f335d5fd66c0a569e33a735e5c55b292d9b0c63052d2a8827c0587",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/fwmav_sim_env_simple.py",
+      "bytes": 1760,
+      "sha256": "17dbfd58ce4cf753e3386611098ad39e7c88b73ccc52e19ab427ec616d4e7ede",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/mission.py",
+      "bytes": 616,
+      "sha256": "5d1e34eac1b6a862bbbd5f70f1c051ed8c214475990fce5f15e2d0d374cc530b",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/MyGLUTWindow.py",
+      "bytes": 1892,
+      "sha256": "2cf93178869d9da6dab731d0c4fe448918ff7530416e8e1071799fc2db0ea70a",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/policy_post_processing.py",
+      "bytes": 960,
+      "sha256": "ce871a0cda920057a70430f6c91a043d5fec11caa677de13081556a6a362e7d8",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/sensor.py",
+      "bytes": 6460,
+      "sha256": "5a84d703af70b87b6c05d588075fbd41dc157e3f01088d3f16114f09d2709835",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/sensor_for_no_pos.py",
+      "bytes": 5492,
+      "sha256": "b7a4715f06ee4fc783870e1b697984ee2c7c15992f3e99515ad15d74d5917d71",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/sensor_fusion.py",
+      "bytes": 10543,
+      "sha256": "f3e0f214ace2e26999a91d5c9c17b9b6bdf76ba17601f317d7915d83a8b2b4d8",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/sensor_fusion_pos.py",
+      "bytes": 14336,
+      "sha256": "bc14f8cce7e09cf4cde06235d042ffe7e165c93d004779fb0c2f9ca66c829758",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/simulation.py",
+      "bytes": 23596,
+      "sha256": "7bc2bc038bea257cbf2a97b6da9ff075c375883231988ccaa0e85fc0249be1d2",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/fwmav/simulation_maneuver.py",
+      "bytes": 30184,
+      "sha256": "62f108c6f6ed9b78056b19fb0604941d6237d75221b65302cd2fa2abab06822b",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/Wing.cpp",
+      "bytes": 9549,
+      "sha256": "321ed421a0a94528d1c36e9f7337ee86b97cfc9d8625ece643bc4f4061d1e9ca",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/Wing.hpp",
+      "bytes": 3799,
+      "sha256": "5944f2db0675278c4053824ca97c18411b5b86066cdf5479d66eeec073cbfeb8",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/Wing.i",
+      "bytes": 97,
+      "sha256": "80cb593d21d60c04ae26521631a697b7b77837f24fc7bcf54e1c5064bd29a6cf",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/Wing.py",
+      "bytes": 5332,
+      "sha256": "9b2c9c3e2497cf8634ebb422f428f9af3733c9c06f5d84ee109ff0871cc7383d",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/envs/Wing_wrap.cxx",
+      "bytes": 146792,
+      "sha256": "69e19d5badae1b875d3f7a05d6372675b42e2b1d37e63fadae99fd3467cdee9c",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/urdf/fwmav/flapper_sc_nominal.urdf",
+      "bytes": 5168,
+      "sha256": "25e174e637c037e890180fcfbd2328e32beba2d99f3b372edd5d0dad94639e0d",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/urdf/fwmav/meshes/left_LE.STL",
+      "bytes": 106684,
+      "sha256": "4eddd9e5d40ae08302872a58dc6f1348fe575927bde7e95d95ace7563a63eda7",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/urdf/fwmav/meshes/left_wing.STL",
+      "bytes": 684,
+      "sha256": "3fccd8ff0a32f456fc889c325ce6d4861f91003f1b2b3a8b01c2fb38d5e00178",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/urdf/fwmav/meshes/right_LE.STL",
+      "bytes": 106684,
+      "sha256": "a63a67fd13b639be4f7d88cb7a73e604c52766fa0c0e52e85ce9067a83ff60b3",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/urdf/fwmav/meshes/right_wing.STL",
+      "bytes": 684,
+      "sha256": "3002f304aeab00e6547d06a3490d6461fa868622c0c9919a8c97d7441d60c660",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/urdf/fwmav/meshes/torso.STL",
+      "bytes": 7084,
+      "sha256": "579635cd5914d427221c704a620c8955888a326d5d1518d5ab1244c4f947e48a",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/urdf/fwmav/meshes/torso_no_base.STL",
+      "bytes": 3084,
+      "sha256": "2f1860fe8633588b4c89065e28a2902913ecaa69a4b91c93591761c5f56e71c9",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/urdf/fwmav/meshes/torso_small_base.STL",
+      "bytes": 7084,
+      "sha256": "8e98d07e547d7dd316c1e3cf59fe7954b62f6339175f96af4618d73a2b4af978",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/urdf/fwmav/meshes/Wing_Camber_70mm_C35mm_no_trailing_L.STL",
+      "bytes": 259084,
+      "sha256": "061e45c1bfed425130473ad4da42d0177c4aedf891ef749c1943310a7ccbb147",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/flappy/urdf/ground.urdf",
+      "bytes": 896,
+      "sha256": "dd3b345c5a512f011be5888fa613b580a4b9c7dd6b4658d6ce7e0f10b3027977",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/fwmav_sim_env.py",
+      "bytes": 7699,
+      "sha256": "48c6619f6ba9b2aa43b94e6a9c07f1bc7fc6b811772777c4e707b30c93610caf",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/fwmav_sim_env_maneuver.py",
+      "bytes": 6778,
+      "sha256": "454daae605c3f2a602afa0c8091ece9eaba8f9a72aaf653b25ab10e1a2475025",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/LICENSE",
+      "bytes": 1043,
+      "sha256": "9c20456a548c4409c6793a8d8174a5812e3fe60666bb51ca1111857a3c7ba64d",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/README.md",
+      "bytes": 7247,
+      "sha256": "736c5ba33601d66667bb18b6cbc5263022a0a910bf8b9b910a2c6ee195eba889",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/setup.py",
+      "bytes": 818,
+      "sha256": "1494572dd9e88443903d17d0bf1e113a44b07dce2b0fb21ed3ff7afb6f61c95a",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/simulation.py",
+      "bytes": 32794,
+      "sha256": "35290154ccf00055505b3182de6c656095a5d81be41bd3402ecca315616e6abe",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/simulation_maneuver.py",
+      "bytes": 35335,
+      "sha256": "65cd78e6a1d409370416e64736a9dd4ba2a26c446d0f97240641fb110cfc19ed",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/test.py",
+      "bytes": 3195,
+      "sha256": "4f09260ab7d65e8d09321418188ff63d0547c0e75d4e1097e2b7ee718a460c5f",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/test_simple.py",
+      "bytes": 3614,
+      "sha256": "2a9f6062c248ce5049895a35f5481f98d7f6f5aa2c688863fbe7cbd64f775b20",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/train.py",
+      "bytes": 2366,
+      "sha256": "88fac99fa2b15cf10a01f1bebe1946d7154ba98bed0dbdac9c7f98e58797853e",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/train_DDPG.py",
+      "bytes": 3438,
+      "sha256": "183e61cac35c1753a8afcffcfb0854137cd5c91dc007de9cee4eac9cfc63ab87",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "third_party/flappy/train_maneuver_DDPG.py",
+      "bytes": 3441,
+      "sha256": "a70524362e67a0b39be793b8ef9e1be1112d924efc1c27c4964774ceaf7fbb35",
+      "role": "upstream_source_and_runtime_json"
+    },
+    {
+      "path": "tools/package_hover_gui.py",
+      "bytes": 4659,
+      "sha256": "ccb72d109a028b35dceb87d69bfce992532579fa45fc5a667a6953e512848d9b",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "tools/package_mainline.py",
+      "bytes": 5233,
+      "sha256": "abc0793e31e0de23c0f9dc342d633a4fe75da500e8d19cca3bc9498ef792f2fa",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "validate_mainline.m",
+      "bytes": 3031,
+      "sha256": "f99090ca1a4949b07d299943512e7f71a606a84465f1318e5f5e27b3dd589fc6",
+      "role": "documentation_or_entry_utility"
+    },
+    {
+      "path": "validation/gui_component_tests.json",
+      "bytes": 118,
+      "sha256": "7380b010dbb2edf0cca54d20dcc6be9acd55d45bddda96e7db39dde79a3db275",
+      "role": "current_validation"
+    },
+    {
+      "path": "validation/gui_parameters_roundtrip.json",
+      "bytes": 1065,
+      "sha256": "c470bdfcc98043949d41a04f59dd0be87111c971183eea5c73f409c080434bc4",
+      "role": "current_validation"
+    },
+    {
+      "path": "validation/gui_relocation_tests.json",
+      "bytes": 682,
+      "sha256": "86c94ec45e17abb24cdd9493fc8b68a9d473e4cbffa2a757157ed6c00aa1ee39",
+      "role": "current_validation"
+    },
+    {
+      "path": "validation/gui_simulation_tests.json",
+      "bytes": 1573,
+      "sha256": "b85cb9420947b03130487ec02dd753f41535be92fe07dd0112e46ed992859a13",
+      "role": "current_validation"
+    },
+    {
+      "path": "validation/gui_传感_preview.png",
+      "bytes": 216756,
+      "sha256": "ab1d168033e0cc606981b65b2b1458a3e73f2d3353b742699b3e7cd06529cd08",
+      "role": "current_validation"
+    },
+    {
+      "path": "validation/gui_姿态_preview.png",
+      "bytes": 226722,
+      "sha256": "b5dde86a322c0085b6741df3c77cecc68fece702f6988b2c2cfd4d280b1f8171",
+      "role": "current_validation"
+    },
+    {
+      "path": "validation/gui_电机_preview.png",
+      "bytes": 219682,
+      "sha256": "1df5239619102674a58edd1d10d0cbb0b2f5931d8982b6f4e95809f1acc9ce18",
+      "role": "current_validation"
+    },
+    {
+      "path": "validation/gui_翼误差_preview.png",
+      "bytes": 210844,
+      "sha256": "d745a1bf043066eebda65b1bb786f7bd04983a97dd35f198bdc8162df9afc045",
+      "role": "current_validation"
+    },
+    {
+      "path": "validation/hover_gui_preview.png",
+      "bytes": 220029,
+      "sha256": "a4a1f08a64be1f203c82a826c7d20a949a5b87cf13cc79f643462a9659b2d396",
+      "role": "current_validation"
+    },
+    {
+      "path": "validation/model_consistency.csv",
+      "bytes": 84,
+      "sha256": "1a1334215f6aea6bb9d6b5f9b3c5411b2784b2d1210a3a03c98e98e680af9ca1",
+      "role": "current_validation"
+    },
+    {
+      "path": "validation/validation_report.json",
+      "bytes": 22651,
+      "sha256": "e559dca0406dd70e15883d4ee1db4a7c8f631687cc2805720f93d23081a70313",
+      "role": "current_validation"
+    }
+  ]
+}

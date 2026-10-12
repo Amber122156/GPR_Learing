@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "baseline_metrics": {
+    "liftoff_s": 0.5031,
+    "valid_window": true,
+    "xy_rms_m": 0.0012704322144084139,
+    "z_rms_m": 0.0065097619774592769,
+    "roll_rms_deg": 0.030597227895085496,
+    "pitch_rms_deg": 0.589918422623463,
+    "saturation_fraction": 0,
+    "max_continuous_saturation_s": 0,
+    "finite": true,
+    "max_penetration_m": 0.00050235729270681206,
+    "pass": true,
+    "trajectory_xy_rms_m": null,
+    "trajectory_xy_max_m": null,
+    "trajectory_yaw_rms_deg": null
+  },
+  "changed_metrics": {
+    "liftoff_s": 0.5051,
+    "valid_window": true,
+    "xy_rms_m": 0.35630980348331515,
+    "z_rms_m": 0.15924128283088998,
+    "roll_rms_deg": 29.404579216068164,
+    "pitch_rms_deg": 26.289984720178357,
+    "saturation_fraction": 0.88877309711812091,
+    "max_continuous_saturation_s": 0.232,
+    "finite": true,
+    "max_penetration_m": 0.00051126326654740706,
+    "pass": false,
+    "trajectory_xy_rms_m": null,
+    "trajectory_xy_max_m": null,
+    "trajectory_yaw_rms_deg": null
+  },
+  "baseline_folder": "D:\\AI_agent\\research\\wing_lift\\dynamic_simulation\\HK_mainline\\results\\gui_hover\\20261011_003605_631",
+  "changed_folder": "D:\\AI_agent\\research\\wing_lift\\dynamic_simulation\\HK_mainline\\results\\gui_hover\\20261011_003646_644",
+  "stopped_duration_s": 0.2242,
+  "stop_folder": "D:\\AI_agent\\research\\wing_lift\\dynamic_simulation\\HK_mainline\\results\\gui_hover\\20261011_003701_686",
+  "checks": "native UI, timer start/stop, completed baseline, changed gains/wing/delay/noise, no extrapolation, cleanup"
+}

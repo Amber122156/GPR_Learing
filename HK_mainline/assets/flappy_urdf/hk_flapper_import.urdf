@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!--
+  HK editable derivative of Purdue Flappy's flapper_sc_nominal.urdf.
+  Kinematic tree, joint frames, axes, limits, and visual mesh references are
+  intentionally retained.  Edit only <inertial> properties until a separate
+  geometry/kinematics change is explicitly planned.
+
+  torso inertia was supplied by the user on 2026-09-06, in kg*m^2 about the
+  torso centre of mass and expressed in the existing torso link axes.
+  torso mass and centre-of-mass location remain temporary Flappy values until
+  corresponding HK values are supplied.
+-->
+<robot name="hk_flapper">
+
+    <material name = "flapper/black"><color rgba = "0 0 0 1"/></material>
+    <material name = "flapper/blue"><color rgba = "0.0 0.0 1.0 1"/></material>
+    <material name = "flapper/red"><color rgba = "1.0 0.0 0.0 1"/></material>
+
+    <link name = "world"/>
+    <joint name = "torso_to_world" type = "floating">
+        <parent link = "world"/>
+        <child link = "torso"/>
+        <origin xyz = "0 0 0" rpy = "0 0 0"/>
+    </joint>
+
+    <link name = "torso">
+        <inertial>
+            <origin xyz = "0 0 -0.01" rpy = "0 0 0"/>
+            <mass value = "0.2"/>
+            <inertia ixx = "0.00053221221" iyy = "0.0002801147" izz = "0.00055220347" ixy = "2.583964e-05" iyz = "-4.476e-08" ixz = "1.62717e-06"/>
+        </inertial>
+        <visual><origin xyz = "0 0 0" rpy = "0 0 0"/><geometry>
+            <mesh filename = "meshes/torso_small_base.STL"/>
+        </geometry><material name = "flapper/black"/></visual>
+        <collision><origin xyz = "0 0 0" rpy = "0 0 0"/><geometry>
+            <mesh filename = "meshes/torso_small_base.STL"/>
+        </geometry></collision>
+    </link>
+
+    <link name = "left_wing">
+        <inertial>
+            <origin xyz = "0 0.0702 0.024" rpy = "0 0 0"/>
+            <mass value = "0.0006"/>
+            <inertia ixx = "2.18e-06" iyy = "2.6e-07" izz = "1.92e-06" ixy = "0" iyz = "0" ixz = "0"/>
+        </inertial>
+        <visual><origin xyz = "0 0 0" rpy = "0 0 0"/><geometry>
+            <mesh filename = "meshes/Wing_Camber_70mm_C35mm_no_trailing_L.STL"/>
+        </geometry><material name = "flapper/blue"/></visual>
+        <collision><origin xyz = "0 0 0" rpy = "0 0 0"/><geometry>
+            <mesh filename = "meshes/Wing_Camber_70mm_C35mm_no_trailing_L.STL"/>
+        </geometry></collision>
+    </link>
+
+    <link name = "right_wing">
+        <inertial>
+            <origin xyz = "0 -0.0702 0.024" rpy = "0 0 0"/>
+            <mass value = "0.0006"/>
+            <inertia ixx = "2.18e-06" iyy = "2.6e-07" izz = "1.92e-06" ixy = "0" iyz = "0" ixz = "0"/>
+        </inertial>
+        <visual><origin xyz = "0 0 0" rpy = "0 0 0"/><geometry>
+            <mesh filename = "meshes/right_wing.STL"/>
+        </geometry><material name = "flapper/red"/></visual>
+        <collision><origin xyz = "0 0 0" rpy = "0 0 0"/><geometry>
+            <mesh filename = "meshes/right_wing.STL"/>
+        </geometry></collision>
+    </link>
+
+    <link name="left_leading_edge">
+        <inertial>
+            <origin xyz = "0 0.0486 0.0025" rpy = "0 0 0"/>
+            <mass value = "0.001"/>
+            <inertia ixx = "2.5e-06" iyy = "4e-08" izz = "2.46e-06" ixy = "0" iyz = "0" ixz = "0"/>
+        </inertial>
+        <visual><origin xyz = "0 0 0" rpy = "0 0 0"/><geometry>
+            <mesh filename = "meshes/left_LE.STL"/>
+        </geometry><material name = "flapper/blue"/></visual>
+    </link>
+
+    <link name="right_leading_edge">
+        <inertial>
+            <origin xyz = "0 -0.0486 0.0025" rpy = "0 0 0"/>
+            <mass value = "0.001"/>
+            <inertia ixx = "2.5e-06" iyy = "4e-08" izz = "2.46e-06" ixy = "0" iyz = "0" ixz = "0"/>
+        </inertial>
+        <visual><origin xyz = "0 0 0" rpy = "0 0 0"/><geometry>
+            <mesh filename = "meshes/right_LE.STL"/>
+        </geometry><material name = "flapper/red"/></visual>
+    </link>
+
+    <joint name = "left_stroke" type = "revolute">
+        <parent link = "torso"/><child link = "left_leading_edge"/>
+        <origin xyz = "0 13.95E-3 18.9913E-3" rpy = "0 0 0"/>
+        <axis xyz = "0 0 1"/><dynamics friction = "1E-9" damping = "8E-9"/>
+        <limit lower = "-1.63" upper = "1.63" effort = "0.02" velocity = "400"/>
+    </joint>
+    <joint name = "left_rotate" type = "revolute">
+        <parent link = "left_leading_edge"/><child link = "left_wing"/>
+        <origin xyz = "0 0 0" rpy = "0 0 0"/>
+        <axis xyz = "0 1 0"/><dynamics friction = "1E-8" damping = "1E-9"/>
+        <limit lower = "-0.7854" upper = "0.7854" effort = "0.02" velocity = "2000"/>
+    </joint>
+    <joint name = "right_stroke" type = "revolute">
+        <parent link = "torso"/><child link = "right_leading_edge"/>
+        <origin xyz = "0 -13.95E-3 18.9913E-3" rpy = "0 0 0"/>
+        <axis xyz = "0 0 -1"/><dynamics friction = "1E-9" damping = "8E-9"/>
+        <limit lower = "-1.63" upper = "1.63" effort = "0.02" velocity = "400"/>
+    </joint>
+    <joint name = "right_rotate" type = "revolute">
+        <parent link = "right_leading_edge"/><child link = "right_wing"/>
+        <origin xyz = "0 0 0" rpy = "0 0 0"/>
+        <axis xyz = "0 1 0"/><dynamics friction = "1E-8" damping = "1E-9"/>
+        <limit lower = "-0.7854" upper = "0.7854" effort = "0.02" velocity = "2000"/>
+    </joint>
+</robot>

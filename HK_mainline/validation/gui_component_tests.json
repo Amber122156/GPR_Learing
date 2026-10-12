@@ -1,0 +1,4 @@
+{
+  "passed": true,
+  "checks": "bounds, JSON, GUI, effective delays, controller gain selection, actual wing loads"
+}

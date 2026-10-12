@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "matlab": "24.1.0.2537033 (R2024a)",
+  "source": "extracted HK_hover_GUI_20261011.zip",
+  "scope": "package-only functions and geometry, native GUI, 5 s complete baseline",
+  "metrics": {
+    "liftoff_s": 0.5031,
+    "valid_window": true,
+    "xy_rms_m": 0.0012704322144084139,
+    "z_rms_m": 0.0065097619774592769,
+    "roll_rms_deg": 0.030597227895085496,
+    "pitch_rms_deg": 0.589918422623463,
+    "saturation_fraction": 0,
+    "max_continuous_saturation_s": 0,
+    "finite": true,
+    "max_penetration_m": 0.00050235729270681206,
+    "pass": true,
+    "trajectory_xy_rms_m": null,
+    "trajectory_xy_max_m": null,
+    "trajectory_yaw_rms_deg": null
+  }
+}
